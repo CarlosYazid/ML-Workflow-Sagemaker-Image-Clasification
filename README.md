@@ -20,7 +20,7 @@ The use case simulates a business scenario where it is necessary to:
 ```bash
 ml-image-classification-workflow/
 ├── notebooks/
-│   └── starter.ipynb              # Jupyter notebook for data preparation and model deployment
+│   └── Deploy and monitor a machine learning workflow for Image Classification.ipynb              # Jupyter notebook for data preparation and model deployment
 ├── scripts/
 │   ├── lambdas/
 │   │   ├── retrieve_image_to_s3.py # Lambda: fetches image from S3 and serializes it
@@ -63,7 +63,7 @@ The workflow is orchestrated by **AWS Step Functions** and consists of three mai
 
 ## 🔑 Key Files
 
-- **`notebooks/starter.ipynb`** → Notebook with steps for training and deploying the SageMaker image classification model.  
+- **`notebooks/Deploy and monitor a machine learning workflow for Image Classification.ipynb`** → Notebook with steps for training and deploying the SageMaker image classification model.  
 - **`scripts/lambdas/retrieve_image_to_s3.py`** → Lambda that retrieves and serializes images from S3.  
 - **`scripts/lambdas/inference.py`** → Lambda that calls a SageMaker endpoint. ⚠️ **Remember to configure the `ENDPOINT` variable with your model name.**  
 - **`scripts/lambdas/valid_confidence.py`** → Lambda that validates the prediction confidence threshold.  
@@ -79,7 +79,7 @@ pip install -r requirements.txt
 ```
 
 ### 2. Deployment
-1. Train and deploy the model in SageMaker using the notebook (`starter.ipynb`).  
+1. Train and deploy the model in SageMaker using the notebook (`Deploy and monitor a machine learning workflow for Image Classification.ipynb`).  
 2. Create the **Lambda functions** in AWS using the scripts in `scripts/lambdas/`.  
    - Assign IAM roles with permissions for **S3, SageMaker, and CloudWatch**.  
    - Configure environment variables if needed.  
